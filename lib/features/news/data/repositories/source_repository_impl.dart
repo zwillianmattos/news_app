@@ -11,9 +11,8 @@ class SourceRepositoryImpl extends SourceRepository {
   @override
   Future<List<SourceModel>> getAll() async {
      try {
-      final Map<String, dynamic> data = await dataSource.getAll();
-      final source = data as List;
-      return source.map((e) => SourceModel.fromJson(e)).toList();
+      final List<dynamic> data = await dataSource.getAll();
+      return data.map((e) => SourceModel.fromJson(e)).toList();
     } catch (e) {
       throw Exception('[Sources ERROR]: $e');
     }

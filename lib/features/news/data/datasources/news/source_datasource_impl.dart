@@ -7,8 +7,8 @@ class SourceDataSource extends ISourceDataSource {
   SourceDataSource(this.http);
 
   @override
-  Future<Map<String, dynamic>> getAll() async {
+  Future<List<dynamic>> getAll() async {
     final Response response = await http.get('/top-headlines/sources');
-    return response.data as Map<String, dynamic>;
+    return response.data as List<dynamic>;
   }
 }

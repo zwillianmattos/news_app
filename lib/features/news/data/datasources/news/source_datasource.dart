@@ -1,5 +1,5 @@
 
 
 abstract class ISourceDataSource {
-  Future<Map<String, dynamic>> getAll();
+  Future<List<dynamic>> getAll();
 }
