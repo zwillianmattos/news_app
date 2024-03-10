@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:news_app/features/news/data/datasources/news/source_datasource_impl.dart';
+import 'package:news_app/features/news/data/models/news/source_model.dart';
 import 'package:news_app/features/news/data/repositories/source_repository_impl.dart';
 import 'package:news_app/features/news/domain/entities/source.dart';
 import 'package:uno/uno.dart';
@@ -18,12 +19,12 @@ void main() {
       final repository = SourceRepositoryImpl(sourceDataSource);
       // Configurando o mock para simular a resposta do dataSource
       when(() => sourceDataSource.getAll()).thenAnswer(
-        (_) async => sourcesMock['sources'],
+        (_) async => sourcesMock,
       );
       // Act
       final result = await repository.getAll();
       // Assert
-      expect(result, isA<List<Source>>());
+      expect(result, isA<List<SourceModel>>());
       expect(result.length, equals(1)); 
     });
   });

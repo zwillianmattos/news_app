@@ -1,0 +1,65 @@
+{
+  // Use o IntelliSense para saber mais sobre os atributos possíveis.
+  // Focalizar para exibir as descrições dos atributos existentes.
+  // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "news_app",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "news_app (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "news_app (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "fav_grab",
+      "cwd": "packages/fav_grab",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "fav_grab (profile mode)",
+      "cwd": "packages/fav_grab",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "fav_grab (release mode)",
+      "cwd": "packages/fav_grab",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "headline",
+      "cwd": "packages/headline",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "headline (profile mode)",
+      "cwd": "packages/headline",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "headline (release mode)",
+      "cwd": "packages/headline",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -8,6 +7,13 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(content);
+    return Text(
+      content,
+      style: const TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+      ),
+      softWrap: true,
+    );
   }
 }

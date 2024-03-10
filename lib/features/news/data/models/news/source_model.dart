@@ -1,7 +1,11 @@
 import 'package:news_app/features/news/domain/entities/source.dart';
 
 class SourceModel extends Source {
-  SourceModel(
+
+  bool isChecked = false;
+  String? faviconUrl = '';
+
+  SourceModel(this.isChecked, 
       {id,
       name,
       description,

@@ -1,6 +1,7 @@
 
-import '../entities/source.dart';
+import 'package:news_app/features/news/data/models/news/source_model.dart';
+
 
 abstract class SourceRepository {
-  Future<List<Source>> getAll();
+  Future<List<SourceModel>> getAll();
 }
