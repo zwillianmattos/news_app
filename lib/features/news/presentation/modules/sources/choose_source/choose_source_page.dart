@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:headline/headline.dart';
 import 'package:news_app/features/news/data/models/news/source_model.dart';
-import 'package:news_app/features/news/domain/entities/source.dart';
 
 import 'choose_source_controller.dart';
 

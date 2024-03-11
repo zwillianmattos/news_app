@@ -7,7 +7,7 @@ import 'package:news_app/features/news/data/repositories/cache/hive_cache_reposi
 import 'package:news_app/features/news/data/repositories/source_repository_impl.dart';
 import 'package:news_app/features/news/domain/repositories/source_repository.dart';
 import 'package:news_app/features/news/infra/factory/uno_factory.dart';
-import 'package:news_app/features/news/presentation/modules/sources/choose_source/choose_source.dart';
+import 'package:news_app/features/news/presentation/modules/sources/choose_source/choose_source_page.dart';
 import 'package:news_app/features/news/presentation/modules/sources/choose_source/choose_source_controller.dart';
 import 'package:news_app/features/news/usecases/sources/choose_source.dart';
 import 'package:uno/uno.dart';
