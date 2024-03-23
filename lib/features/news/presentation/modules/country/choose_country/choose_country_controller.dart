@@ -29,6 +29,17 @@ class ChooseCountryController extends ValueNotifier<ChooseCountryState> {
       value = ErrorChooseCountryState(message);
     }
   }
+  bool isNextButtonVisible() {
+    if (value is SuccessChooseCountryState) {
+      final selectedSourcesCount = (value as SuccessChooseCountryState)
+          .country
+          .where((source) => source.isChecked)
+          .length;
+      return selectedSourcesCount == 1;
+    }
+    return false;
+  }
+  
 }
 
 abstract class ChooseCountryState extends Disposable {
@@ -39,8 +50,8 @@ abstract class ChooseCountryState extends Disposable {
 class LoadingChooseCountryState extends ChooseCountryState {}
 
 class SuccessChooseCountryState extends ChooseCountryState {
-  final List<CountryModel> sources;
-  SuccessChooseCountryState(this.sources);
+  final List<CountryModel> country;
+  SuccessChooseCountryState(this.country);
 }
 
 class ErrorChooseCountryState extends ChooseCountryState {

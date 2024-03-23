@@ -10,7 +10,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.close();
   await Hive.openBox<String>('source_data_cache');
-  Modular.setInitialRoute('/sources/');
+  Modular.setInitialRoute('/country/');
   runApp(
     ModularApp(
       module: AppModule(),

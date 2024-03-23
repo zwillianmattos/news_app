@@ -1,7 +1,7 @@
 class CountryModel {
-  final String code;
-  final String name;
-  final bool isChecked;
+  String code;
+  String name;
+  bool isChecked;
 
   CountryModel({
     required this.code,

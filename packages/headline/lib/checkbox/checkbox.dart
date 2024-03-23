@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CheckBoxWidget extends StatefulWidget {
@@ -48,11 +47,12 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
             Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   ClipOval(
                     child: SizedBox(
-                      width: 48,
-                      height: 48,
+                      width: 40,
+                      height: 40,
                       child: widget.icon,
                     ),
                   ),
@@ -60,13 +60,15 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                   Text(
                     widget.text,
                     textAlign: TextAlign.center,
+                    softWrap: true,
+                    overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 14),
+                        fontWeight: FontWeight.bold, fontSize: 12),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
           ],
         ),
       ),

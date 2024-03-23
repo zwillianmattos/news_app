@@ -7,6 +7,7 @@ class ChooseCountryUseCase {
   ChooseCountryUseCase(this.repository);
 
   Future<List<CountryModel>> getAll() async {
+    await Future.delayed(const Duration(seconds: 1));
     return repository.getAll();
   }
 }

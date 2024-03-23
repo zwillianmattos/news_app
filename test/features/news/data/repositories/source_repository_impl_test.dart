@@ -5,7 +5,6 @@ import 'package:mocktail/mocktail.dart';
 import 'package:news_app/features/news/data/datasources/news/source_datasource_impl.dart';
 import 'package:news_app/features/news/data/models/news/source_model.dart';
 import 'package:news_app/features/news/data/repositories/source_repository_impl.dart';
-import 'package:news_app/features/news/domain/entities/source.dart';
 import 'package:uno/uno.dart';
 
 class SourceDataSourceMock extends Mock implements SourceDataSource {}

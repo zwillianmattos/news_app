@@ -11,9 +11,15 @@ class SearchBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SearchBar(
       elevation: MaterialStateProperty.resolveWith<double?>(
-          (Set<MaterialState> states) => 1.0),
+          (Set<MaterialState> states) => 0.0),
       controller: controller,
       onChanged: onChanged,
+      hintText: label,
+      padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
+          (Set<MaterialState> states) => const EdgeInsets.symmetric(horizontal: 16.0)),
+      leading: const Icon(Icons.search, size: 24),
+      backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+          (Set<MaterialState> states) =>Color.fromARGB(255, 221, 221, 221)),
     );
   }
 }

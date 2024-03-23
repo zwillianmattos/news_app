@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:news_app/features/news/presentation/modules/country/country_module.dart';
 
 import 'features/news/presentation/modules/sources/source_module.dart';
 
@@ -13,5 +14,6 @@ class AppModule extends Module {
     //   AuthGuard()
     // ]);
     r.module('/sources', module: SourceModule());
+    r.module('/country', module: CountryModule());
   }
 }

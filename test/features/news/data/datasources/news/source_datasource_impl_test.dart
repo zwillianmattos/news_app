@@ -3,10 +3,11 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:news_app/features/news/data/datasources/news/source_datasource_impl.dart';
+import 'package:news_app/features/news/data/repositories/cache/cache_repository.dart';
 import 'package:uno/uno.dart';
 
 class UnoMock extends Mock implements Uno {}
-
+class CacheRepositoryMock extends Mock implements CacheRepository {}
 class ResponseMock extends Mock implements Response {}
 
 void main() {
@@ -15,7 +16,8 @@ void main() {
       // Arrange
       final uno = UnoMock();
       final response = ResponseMock();
-      final sourceDataSource = SourceDataSource(uno);
+      final cache = CacheRepositoryMock();
+      final sourceDataSource = SourceDataSource(uno, cache);
       when(() => response.data).thenReturn(sourcesMock);
       when(() => uno.get('/top-headlines/sources')).thenAnswer(
         (_) async => response,
